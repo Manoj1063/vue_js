@@ -8,9 +8,11 @@
   <body>
     <div class="nav-bar"></div>
     <div id="app">
-      <product></product>
-      <product></product>
-      <product></product>
+      <!-- Add to cart button -->
+      <div class="cart">
+        <p> Cart{{ cart.length }}></p>
+      </div>
+      <product :premium="premium"  v-on:add-to-cart="updateCart"> </product>
     </div>
     <script src="/dist/build.js"></script>
   </body>
