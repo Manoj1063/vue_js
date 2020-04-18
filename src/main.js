@@ -16,15 +16,11 @@ Vue.component('product', {
       <img v-bind:src="image" />
     </div>
 
-    <div class="product-info">
-      <h1>{{ title }}</h1>
+      <div class="product-info">
+      <h1>{{ product }}</h1>
       <p v-if="inStock">In Stock</p>
-      <p v-else  :class="{ outofstock: !inStock }"
-                 :style = "outofstock"
-                 >Out of Stock</p>
-      <div>
-
-      <p> Shipping : {{shipping}}</p>
+      <p v-else>Out of Stock</p>
+      <p>Shipping: {{ shipping }}</p>
 
     <ul>
         <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
